@@ -7,9 +7,8 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
-  isDarkMode = false;
 
-  constructor(private renderer: Renderer2) {
+  constructor() {
     
   }
 
