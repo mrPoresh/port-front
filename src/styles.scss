@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+// Light theme palettes
+$custom-light-primary: mat.define-palette(mat.$indigo-palette);
+$custom-light-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$custom-light-warn: mat.define-palette(mat.$red-palette);
+
+// Dark theme palettes
+$custom-dark-primary: mat.define-palette(mat.$blue-grey-palette);
+$custom-dark-accent: mat.define-palette(mat.$amber-palette, A200, A100, A400);
+$custom-dark-warn: mat.define-palette(mat.$deep-orange-palette);
+
+// Light theme definition
+$custom-light-theme: mat.define-light-theme((
+  color: (
+    primary: $custom-light-primary,
+    accent: $custom-light-accent,
+    warn: $custom-light-warn
+  )
+));
+
+// Dark theme definition
+$custom-dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $custom-dark-primary,
+    accent: $custom-dark-accent,
+    warn: $custom-dark-warn
+  )
+));
+
+// Light theme inclusion
+.light-theme {
+  @include mat.all-component-themes($custom-light-theme);
+}
+
+// Dark theme inclusion
+.dark-theme {
+  @include mat.all-component-themes($custom-dark-theme);
+}
+
+html, body { width: 100%; height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
