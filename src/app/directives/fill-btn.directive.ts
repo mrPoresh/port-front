@@ -1,10 +1,15 @@
-import { Directive } from '@angular/core';
+import { Directive, HostBinding, Input } from '@angular/core';
 
 @Directive({
   selector: '[appFillBtn]',
-  standalone: true
 })
 export class FillBtnDirective {
+  @Input() btnSize?: 'small' | 'medium' | 'large';
+  @Input() btnColor?: 'primary' | 'accent' | 'warn';
+
+  @HostBinding('class') get classes() {
+    return `${this.btnSize} ${this.btnColor}`;
+  }
 
   constructor() { }
 

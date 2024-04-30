@@ -1,9 +1,9 @@
 import { Directive, HostBinding, Input } from '@angular/core';
 
 @Directive({
-  selector: '[appFlatBtn]'
+  selector: '[appIconBtn]',
 })
-export class FlatBtnDirective {
+export class IconBtnDirective {
   @Input() btnSize?: 'small' | 'medium' | 'large';
   @Input() btnColor?: 'primary' | 'accent' | 'warn';
 
