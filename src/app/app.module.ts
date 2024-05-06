@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 
 import { AppComponent } from './app.component';
 import { BasePageComponent } from './components/base/base-page/base-page.component';
@@ -22,6 +23,7 @@ import { FlatBtnDirective } from './directives/flat-btn.directive';
 import { FillBtnDirective } from './directives/fill-btn.directive';
 import { ShowPageComponent } from './components/show-page/show-page.component';
 import { IconBtnDirective } from './directives/icon-btn.directive';
+import { ToggBtnDirective } from './directives/togg-btn.directive';
 
 
 @NgModule({
@@ -35,6 +37,7 @@ import { IconBtnDirective } from './directives/icon-btn.directive';
     FlatBtnDirective,
     FillBtnDirective,
     IconBtnDirective,
+    ToggBtnDirective,
     ShowPageComponent,
   ],
   imports: [
@@ -46,6 +49,7 @@ import { IconBtnDirective } from './directives/icon-btn.directive';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
+    MatSlideToggleModule,
   ],
   providers: [
     // services, guards, interceptors

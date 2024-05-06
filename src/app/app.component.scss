@@ -7,6 +7,19 @@
     justify-content: flex-start;
     align-items: center;
 
+    .app-container {
+        max-width: 90rem;
+        width: calc(100% - 2rem);
+
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        padding: 1rem;
+    }
+
     app-header, app-footer, router-outlet {
         width: 100%;
     }

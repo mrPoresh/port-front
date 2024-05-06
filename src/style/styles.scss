@@ -274,11 +274,13 @@ $dark-theme: mat.define-dark-theme((
 
 // Define breakpoints
 $breakpoints: (
-  "large": 64rem,  // 1024px
-  "medium": 48rem, // 768px
-  "small": 30rem   // 480px
+  "XXLARGE": 120rem,
+  "XLARGE": 90rem,
+  "LARGE": 75rem,
+  "MEDIUM": 62rem, 
+  "SMALL": 48rem,
+  "XSMALL": 30rem   
 );
-
 
 html, body {
   width: 100%;
@@ -311,13 +313,13 @@ h1, h2, h3, h4, h5, p {
 @mixin responsive-typography($base-size, $large, $medium, $small) {
   font-size: $base-size;
 
-  @media (max-width: map-get($breakpoints, 'large')) {
+  @media (max-width: map-get($breakpoints, 'LARGE')) {
     font-size: $large;
   }
-  @media (max-width: map-get($breakpoints, 'medium')) {
+  @media (max-width: map-get($breakpoints, 'MEDIUM')) {
     font-size: $medium;
   }
-  @media (max-width: map-get($breakpoints, 'small')) {
+  @media (max-width: map-get($breakpoints, 'SMALL')) {
     font-size: $small;
   }
 }
@@ -325,9 +327,9 @@ h1, h2, h3, h4, h5, p {
 // Applying mixin to elements
 h1 {
   font-family: "Bebas Neue", sans-serif;
-  font-weight: 700; 
+  font-weight: 500; 
 
-  @include responsive-typography(4rem, 3.5rem, 3rem, 2.5rem);
+  @include responsive-typography(6rem, 3.5rem, 3rem, 2.5rem);
 }
 h2 {
   font-family: "Bebas Neue", sans-serif;
@@ -718,6 +720,44 @@ p {   //  def text
   // Responsive text transformation
   @media (max-width: 768px) {
     text-transform: uppercase;
+  }
+}
+
+/* ----------------------------------------------------- */
+
+[appToggBtn] {
+  display: inline-block;
+  position: relative;
+
+  width: 3.125rem;  // Size of the toggle
+  height: 1.5625rem;  // Height of the toggle
+  
+  background-color: var(--primary-500); // Default background color
+  border-radius: 4rem; // Rounded edges
+
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:after {
+    content: '';
+    position: absolute;
+
+    top: 0.125rem;  // 2px / 16px = 0.125rem
+    left: 0.125rem; // 2px / 16px = 0.125rem
+    width: 1.3125rem;  // 21px / 16px = 1.3125rem
+    height: 1.3125rem; // 21px / 16px = 1.3125rem
+
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+
+  &.toggled {
+    background-color: var(--primary-500); // Green background when toggled
+
+    &:after {
+      transform: translateX(1.5625rem); // 25px / 16px = 1.5625rem, 
+    }
   }
 }
 

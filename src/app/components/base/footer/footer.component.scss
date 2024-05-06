@@ -1,0 +1,88 @@
+@use '../../../../style/styles.scss' as theme;
+
+@mixin mobile-footer-layout {
+    @media (max-width: map-get(theme.$breakpoints, 'MEDIUM')) {
+
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    
+        padding: 4rem 0rem 4rem 0rem;
+
+        .social-container {
+            gap: 2rem;
+
+            .additional-container {
+
+            }
+            .social-navigation {
+
+            }
+    
+            .social-navigation {
+
+            }
+    
+            h1 {
+            font-size: 1.5rem; // Smaller font size for headers
+            line-height: normal;
+            }
+        }
+    }
+}
+
+footer {
+    height: calc(100vh - 12rem);
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 4rem 0rem 4rem 0rem;
+
+    @include mobile-footer-layout;
+
+    .social-container {
+
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        
+        gap: 4rem;
+
+        .additional-container {
+
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            gap: 0.5rem
+        }
+
+        .social-navigation {
+
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            gap: 1.5rem
+
+        }
+
+        h1 {
+            line-height: 5.5rem;
+            text-transform: uppercase;
+        }
+
+    }
+
+}
+

@@ -1,4 +1,12 @@
 <header>
-    <h2>Header</h2>
-    <button (click)="toggleTheme()">Change</button>    
+    <h2 style="padding-left: 2rem;">Yahor Poresh</h2>
+    <ng-container *ngIf="deviceType.breakpoint >= breakpoints.LARGE">
+        <div class="nav-container">
+            <div appToggBtn (click)="toggleTheme()" [(toggled)]="isDarkTheme"><!-- This div will act as a toggle button --></div>
+            <button appFlatBtn btnSize="small" btnColor="primary">Show</button>
+            <button appFlatBtn btnSize="small" btnColor="primary">Work</button>
+            <button appFlatBtn btnSize="small" btnColor="primary">About</button>
+            <button appFlatBtn btnSize="small" btnColor="primary">Contact</button>
+        </div> 
+    </ng-container>
 </header>
