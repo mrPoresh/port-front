@@ -6,10 +6,15 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+
+        gap: 4rem;
     
         padding: 4rem 0rem 4rem 0rem;
 
         .social-container {
+            width: 100%;
+            max-width: 60rem;
+
             gap: 2rem;
 
             .additional-container {
@@ -20,12 +25,24 @@
             }
     
             .social-navigation {
-
+                align-self: center;
             }
     
             h1 {
-            font-size: 1.5rem; // Smaller font size for headers
-            line-height: normal;
+                font-size: 1.5rem; // Smaller font size for headers
+                line-height: normal;
+            }
+        }
+
+        .contact-container {  
+            width: 100%;
+            max-width: 60rem;
+
+            align-self: center !important;
+            flex-grow: none !important;
+
+            .mat-mdc-form-field {
+                width: 80%;
             }
         }
     }
@@ -49,6 +66,7 @@ footer {
         display: flex;
         flex-wrap: nowrap;
         flex-direction: column;
+        flex-grow: 1;
         justify-content: flex-start;
         align-items: flex-start;
         
@@ -80,6 +98,27 @@ footer {
         h1 {
             line-height: 5.5rem;
             text-transform: uppercase;
+        }
+
+    }
+
+    .contact-container {   
+        flex-grow: 3;
+        align-self: baseline;
+        
+        #contact-form {
+            
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+
+            gap: 2rem;
+            
+            .mat-mdc-form-field {
+                width: 80%;
+            }
         }
 
     }

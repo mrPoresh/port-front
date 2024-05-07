@@ -762,3 +762,98 @@ p {   //  def text
 }
 
 /* ----------------------------------------------------- */
+
+// Base styling for all form fields
+.mat-mdc-form-field {
+  padding: 0.5rem;
+
+  font-family: "Ubuntu", sans-serif; 
+  font-weight: 600; 
+  font-weight: 1rem;
+
+  //  def. case
+  .mat-mdc-text-field-wrapper {
+    
+    .mdc-notched-outline__trailing {
+      border: none;
+
+      border-top: 0.25rem solid var(--accent-300) !important;
+      border-right: 0.25rem solid var(--accent-300) !important;
+      border-bottom: 0.25rem solid var(--accent-300) !important;
+
+      border-left: none;
+
+      border-top-right-radius: 1rem !important;
+      border-bottom-right-radius: 1rem !important;
+
+      transition: border-color 0.3s, background-color 0.3s;
+
+    }
+
+    .mdc-notched-outline__leading {
+      border: none;
+      border-right: none;
+
+      border-top: 0.25rem solid var(--accent-300) !important;
+      border-left: 0.25rem solid var(--accent-300) !important;
+      border-bottom: 0.25rem solid var(--accent-300) !important;
+
+      border-top-left-radius: 1rem !important;
+      border-bottom-left-radius: 1rem !important;
+
+      transition: border-color 0.3s, background-color 0.3s;
+
+    }
+
+    &:hover {
+
+      .mdc-notched-outline__trailing {
+        border-top: 0.25rem solid var(--accent-100) !important;
+        border-right: 0.25rem solid var(--accent-100) !important;
+        border-bottom: 0.25rem solid var(--accent-100) !important;
+      }
+  
+      .mdc-notched-outline__leading {
+        border-top: 0.25rem solid var(--accent-100) !important;
+        border-left: 0.25rem solid var(--accent-100) !important;
+        border-bottom: 0.25rem solid var(--accent-100) !important;
+      }
+
+    }
+
+  }
+
+  // focused case
+  &.mat-focused {
+    
+    .mat-mdc-text-field-wrapper {
+
+      .mdc-notched-outline__trailing {
+        border: none;
+        border-left: none;
+
+        border-top: 0.25rem solid var(--accent-100) !important;
+        border-right: 0.25rem solid var(--accent-100) !important;
+        border-bottom: 0.25rem solid var(--accent-100) !important;
+
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+      }
+
+      .mdc-notched-outline__leading {
+        border: none;
+        border-right: none;
+
+        border-top: 0.25rem solid var(--accent-100) !important;
+        border-left: 0.25rem solid var(--accent-100) !important;
+        border-bottom: 0.25rem solid var(--accent-100) !important;
+
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+      }
+
+    }
+
+  }
+
+}

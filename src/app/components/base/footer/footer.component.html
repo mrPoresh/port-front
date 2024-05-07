@@ -15,6 +15,24 @@
         </div>
     </div>
     <div class="contact-container">
-        <h2>Hello</h2>
+        <form id="contact-form" name="contactForm" [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm)">
+            <mat-form-field appearance="outline">
+                <input matInput type="text" formControlName="name">
+            </mat-form-field>
+            
+            <mat-form-field appearance="outline">
+                <input matInput type="text" formControlName="email">
+            </mat-form-field>
+    
+            <mat-form-field appearance="outline">
+                <input matInput type="text" formControlName="subject">
+            </mat-form-field>
+    
+            <mat-form-field appearance="outline">
+                <input matInput type="text" formControlName="message">
+            </mat-form-field>
+
+            <button appFillBtn btnSize="medium" btnColor="primary" type="submit">Submit</button>
+        </form>
     </div>
 </footer>
