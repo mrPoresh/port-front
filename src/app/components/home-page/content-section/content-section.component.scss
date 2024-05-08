@@ -1,0 +1,111 @@
+@use '../../../../style/styles.scss' as theme;
+
+@mixin mobile-content-layout {
+    @media (max-width: map-get(theme.$breakpoints, 'XLARGE')) {
+        flex-direction: column !important;
+        gap: 2rem;
+
+        .content-image-container {
+            max-width: 700px !important;
+            width: 100% !important;
+
+            gap: 1rem !important;
+        }
+        
+        .content-table-container {
+            align-items: start !important;
+        }
+        
+    }
+}
+
+.content-page-wrapper {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;  
+
+    gap: 4rem;
+
+    @include mobile-content-layout;
+
+    .content-image-container {
+        max-width: 700px;
+        max-height: 700px;
+        width: 50%;
+ 
+        aspect-ratio: 1 / 1;
+
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;  
+
+        gap: 2rem;
+
+        background-color: var(--accent-700);
+        border-radius: 5%;
+
+        img {
+            object-fit: cover;
+            width: 85%;
+
+            border-radius: 5%;
+        }
+    }
+
+    .content-table-container {
+        width: 100%;
+        max-width: 700px;
+
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;  
+
+        text-align: left;
+
+        mat-list {
+            width: 100%;
+
+            padding: 2rem 0 2rem 0;
+
+            mat-list-item {
+                padding: 0;
+            }
+
+            span {
+                display: block;
+
+                width: 100%;
+
+                border: 0.125rem solid var(--accent-700) !important;
+                border-radius: 5%;
+
+            }
+        }
+
+        h3 {
+            width: 100%;
+
+            padding-bottom: 2rem;
+        }
+
+        h5 {
+            width: 100%;
+        }
+
+        .content-action-container {
+            width: 100%;
+
+            padding-top: 2rem;
+        }
+
+    }
+}

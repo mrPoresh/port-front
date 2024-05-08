@@ -309,8 +309,8 @@ h1, h2, h3, h4, h5, p {
   color: var(--accent-contrast-900);
 }
 
-// Mixin to apply responsive typography
-@mixin responsive-typography($base-size, $large, $medium, $small) {
+// Mixin to apply responsive fontsize
+@mixin responsive-fontsize($base-size, $large, $medium, $small) {
   font-size: $base-size;
 
   @media (max-width: map-get($breakpoints, 'LARGE')) {
@@ -324,42 +324,58 @@ h1, h2, h3, h4, h5, p {
   }
 }
 
+// Mixin to apply responsive line-height
+@mixin responsive-lineheight($base-size, $large, $medium, $small) {
+  line-height: $base-size;
+
+  @media (max-width: map-get($breakpoints, 'LARGE')) {
+    line-height: $large;
+  }
+  @media (max-width: map-get($breakpoints, 'MEDIUM')) {
+    line-height: $medium;
+  }
+  @media (max-width: map-get($breakpoints, 'SMALL')) {
+    line-height: $small;
+  }
+}
+
 // Applying mixin to elements
 h1 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 500; 
 
-  @include responsive-typography(6rem, 3.5rem, 3rem, 2.5rem);
+  @include responsive-fontsize(6rem, 3.5rem, 3rem, 2.5rem);
 }
 h2 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 600; 
 
-  @include responsive-typography(3rem, 2.75rem, 2.5rem, 2rem);
+  @include responsive-fontsize(3rem, 2.75rem, 2.5rem, 2rem);
 }
 h3 {
   font-family: "Ubuntu", sans-serif; 
   font-weight: 600; 
 
-  @include responsive-typography(2rem, 1.75rem, 1.5rem, 1.5rem);
+  @include responsive-fontsize(2rem, 1.75rem, 1.5rem, 1.5rem);
 }
 h4 {  //  title for def text
   font-family: "Ubuntu", sans-serif; 
   font-weight: 550;
 
-  @include responsive-typography(1.5rem, 1.25rem, 1.25rem, 1.25rem);
+  @include responsive-fontsize(1.5rem, 1.25rem, 1.25rem, 1.25rem);
 }
 h5 {  //  Buttons 
   font-family: "Ubuntu", sans-serif; 
   font-weight: 500;
 
-  @include responsive-typography(1.25rem, 1.25rem, 1rem, 1rem);
+  @include responsive-fontsize(1.25rem, 1.25rem, 1rem, 1rem);
+  @include responsive-lineheight(1.6rem, 1.6rem, 1.3rem, 1.3rem);
 }
 p {   //  def text
   font-family: "Ubuntu", sans-serif; 
   font-weight: 450;
 
-  @include responsive-typography(1rem, 1rem, 0.875rem, 0.875rem);
+  @include responsive-fontsize(1rem, 1rem, 0.875rem, 0.875rem);
 }
 
 /* ----------------------------------------------------- */
@@ -474,7 +490,7 @@ p {   //  def text
   font-family: "Ubuntu", sans-serif;
   font-size: 1rem; // Default font size
   text-align: center;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--accent-contrast-900);
 
   border: none;

@@ -1,22 +1,27 @@
 @use '../../../style/styles.scss' as theme;
 
-@mixin mobile-footer-layout {
+@mixin mobile-home-layout {
     @media (max-width: map-get(theme.$breakpoints, 'MEDIUM')) {
         gap: 4rem;
 
         .intro-container {
-            height: 100%;   // fix this 
+            height: auto !important;
 
             flex-direction: column !important;
             justify-content: flex-start !important;
             align-items: center !important;
 
             .into-header {
+                width: 100% !important;
                 padding: 0 !important;
+
+                .intro-nav {
+                    gap: 1rem !important;
+                }
             }
 
-            .into-img {
-                max-width: 100% !important;
+            img {
+                width: 100% !important;
                 padding: 0 !important;
             }
         }
@@ -24,10 +29,19 @@
         .self-container {       //// REBUILD
             flex-direction: column !important;
             justify-content: flex-start !important;
-            align-items: center !important;
+            align-items: start !important;
+            
+            .self-desc {
+                max-width: 700px !important;
+            }
         }
         
     }
+
+    @media (max-width: map-get(theme.$breakpoints, 'LARGE')) {
+
+    }
+
 }
 
 .home-page-wrapper {
@@ -43,7 +57,7 @@
 
     gap: 6rem;
 
-    @include mobile-footer-layout;
+    @include mobile-home-layout;
 
     .intro-container {
         width: 100%;
@@ -58,6 +72,8 @@
         gap: 4rem;
 
         .into-header {
+            width: 50%;
+
             display: flex;
             flex-wrap: nowrap;
             flex-direction: column;
@@ -78,28 +94,33 @@
             }
         }
 
-        .into-img {
-            max-width: 60%;
+        img {
+            width: 50%;
+            max-width: 700px;
 
-            img {
+            object-fit: cover;
 
-                width: 100%;
-                object-fit: cover;
-
-                border-radius: 4rem;
-            }
+            border-radius: 5%;
         }
 
     }
 
+    .content-section {
+        width: 100%;
+        text-align: left;
+    }
+
     .self-container {
-        height: calc(100vh - 12rem);
+        height: calc(100vh - 4rem);
+        width: 100%;
 
         display: flex;
         flex-wrap: nowrap;
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;  
+
+        padding-top: 2rem;
 
         .self-header {
             
@@ -115,7 +136,25 @@
             align-items: center;
 
             gap: 4rem;
+            padding-top: 2rem;
+
+            text-align: left;
+            
+            h5 {
+                width: 100%;
+            }
+
+            .h5-primary {
+                width: 100%;
+
+                color: var(--primary-500);
+                text-decoration: underline;
+            }
         }
 
+    }
+
+    app-content-section {
+        width: 100%;
     }
 }

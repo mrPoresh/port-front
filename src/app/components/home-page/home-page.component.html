@@ -12,21 +12,28 @@
             </div>
         </div>
 
-        <div class="into-img">
-            <img src="../../../assets/images/YP.jpg">
-        </div>
+        <img src="../../../assets/images/YP.jpg">
     </div>
     
     <!-- project pages -->
+    <div class="content-section">
+        <h1>Featured Projects</h1>
+        <h5>Here are some of the selected projects that showcase my passion for front-end development.</h5>
+    </div>
+    <ng-container *ngIf="contentSectionsData">
+        <ng-container *ngFor="let projectDescription of contentSectionsData">
+            <app-content-section [_projectDescription]="projectDescription"></app-content-section>
+        </ng-container>
+    </ng-container>
     
     <div class="self-container">
         <div class="self-header">
             <h1>About me</h1>
         </div>
         <div class="self-desc">
-            <h3>I am a front-end developer based in Wrocław. Has Control Engineering & Robotics background. </h3>
-            <h5>I am a front-end developer based in Wrocław looking for exciting opportunities.Has Control Engineering & Robotics background. Likes to focus on accessibility when developing. Passionate and curious about solving problems. Currently, Im exploring Angular, Webflow and a bit of Designing. While I am not programming, I enjoy playing football, photography and playing Valorant. Learning more to improve skill.</h5>
-            <h5>More about me</h5>
+            <h3>I am a front-end developer and student at the Wroclaw University of Science and Technology, majoring in Control Engineering and Robotics. </h3>
+            <h5>I am a front-end developer and a student at the Wroclaw University of Science and Technology, majoring in Control Engineering and Robotics. I have been living in the city of Wroclaw for about 6 years, at the moment I work full-time as a front-end developer when my studies allow :) I like to create user-friendly and modern web applications, I mainly use Angular, in my opinion it is one of the best frameworks for the web, since the tools in it allow you to create applications of unlimited size and complexity. I also like the Astro framework because of its architecture.</h5>
+            <h5 class="h5-primary">More about me</h5>
         </div>
     </div>
 </div>

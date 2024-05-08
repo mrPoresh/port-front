@@ -1,1 +1,31 @@
-<p>content-section works!</p>
+<div class="content-page-wrapper">
+    <div class="content-image-container">
+        <img src="{{projectDescription.imageUrl}}"> <!-- centered -->
+    </div>
+
+    <div class="content-table-container">
+        <h3>{{projectDescription.title}}</h3>
+        <h5>{{projectDescription.description}}</h5>
+        
+        <mat-list>
+            <mat-list-item><h4>Project Description</h4></mat-list-item>
+            <span></span>
+            <mat-list-item>
+                <div style="width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
+                    <p>Year</p><p>{{projectDescription.info.year}}</p>
+                </div>
+            </mat-list-item>
+            <span></span>
+            <mat-list-item>
+                <div style="width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
+                    <p>Role</p><p>{{projectDescription.info.role}}</p>
+                </div>
+            </mat-list-item>
+            <span></span>
+        </mat-list>
+
+        <div class="content-action-container">
+            <button style="width: 16rem;" appFillBtn btnSize="small" btnColor="primary">See on github</button>
+        </div>
+    </div>
+</div>
