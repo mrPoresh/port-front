@@ -14,6 +14,14 @@
         
         .content-table-container {
             align-items: start !important;
+
+            .content-action-container {
+                width: auto !important;
+
+                align-self: center;
+    
+                padding: 1rem 0 2rem 0 !important;
+            }
         }
         
     }

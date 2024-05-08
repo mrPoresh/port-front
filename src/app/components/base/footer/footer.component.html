@@ -8,28 +8,32 @@
         </div>
 
         <div class="social-navigation">
-            <button appIconBtn btnSize="medium" btnColor="primary"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon></button>
-            <button appIconBtn btnSize="medium" btnColor="primary"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon></button>
-            <button appIconBtn btnSize="medium" btnColor="primary"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon></button>
-            <button appIconBtn btnSize="medium" btnColor="primary"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon></button>
+            <button appIconBtn btnSize="medium" btnColor="primary"><i class="fas fa-envelope"></i></button>
+            <button appIconBtn btnSize="medium" btnColor="primary"><i class="fab fa-github"></i></button>
+            <button appIconBtn btnSize="medium" btnColor="primary"><i class="fab fa-telegram-plane"></i></button>
+            <button appIconBtn btnSize="medium" btnColor="primary"><i class="fab fa-instagram"></i></button>
         </div>
     </div>
     <div class="contact-container">
         <form id="contact-form" name="contactForm" [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm)">
+            <h5>Name</h5>
             <mat-form-field appearance="outline">
                 <input matInput type="text" formControlName="name">
             </mat-form-field>
             
+            <h5>Email</h5>
             <mat-form-field appearance="outline">
                 <input matInput type="text" formControlName="email">
             </mat-form-field>
     
+            <h5>Topic</h5>
             <mat-form-field appearance="outline">
                 <input matInput type="text" formControlName="subject">
             </mat-form-field>
     
+            <h5>Message</h5>
             <mat-form-field appearance="outline">
-                <input matInput type="text" formControlName="message">
+                <textarea matInput type="text" formControlName="message" rows="6"></textarea>
             </mat-form-field>
 
             <button appFillBtn btnSize="medium" btnColor="primary" type="submit">Submit</button>

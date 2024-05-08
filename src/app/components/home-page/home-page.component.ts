@@ -15,7 +15,7 @@ const contentSectionsData: ProjectSection[] = [
   {
     imageUrl: 'assets/images/angular.png',
     title: 'Angular in genearal',
-    description: 'At the moment I am a Web Developer, I really like working in my company, with which I started my career as a programmer. Here I have implemented various projects and tasks, both with the user side and with the server side. Here, for example, I worked on creating a NET Marketplace, where I was directly involved in processing payments in the blockchain, creating smart contracts and the client side.',
+    description: 'At the moment I am a Web Developer, I really like working in my company, with which I started my career as a programmer. Here I have implemented various projects and tasks, both with the user side and with the server side. Here, for example, I worked on creating a NFT Marketplace, where I was directly involved in processing payments in the blockchain, creating smart contracts and the client side.',
     info: {
       year: '2020-...',
       role: 'Developer',

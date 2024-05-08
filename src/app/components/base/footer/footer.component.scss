@@ -2,20 +2,21 @@
 
 @mixin mobile-footer-layout {
     @media (max-width: map-get(theme.$breakpoints, 'MEDIUM')) {
+        height: auto !important;
 
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
 
-        gap: 4rem;
+        gap: 4rem !important;
     
-        padding: 4rem 0rem 4rem 0rem;
+        padding: 4rem 0rem 4rem 0rem !important;
 
         .social-container {
-            width: 100%;
-            max-width: 60rem;
+            width: 100% !important;
+            max-width: 60rem !important;
 
-            gap: 2rem;
+            gap: 2rem !important;
 
             .additional-container {
 
@@ -32,24 +33,31 @@
                 font-size: 1.5rem; // Smaller font size for headers
                 line-height: normal;
             }
+
+            
         }
 
         .contact-container {  
-            width: 100%;
-            max-width: 60rem;
+            width: 100% !important;
+            max-width: 60rem !important;
 
             align-self: center !important;
             flex-grow: none !important;
 
             .mat-mdc-form-field {
-                width: 80%;
+                width: 100% !important;
+            }
+
+            h5 {
+                width: 100% !important;
             }
         }
     }
 }
 
 footer {
-    height: calc(100vh - 12rem);
+    min-height: calc(100vh - 12rem);
+    height: 100%;
 
     display: flex;
     flex-wrap: nowrap;
@@ -114,10 +122,14 @@ footer {
             justify-content: flex-start;
             align-items: center;
 
-            gap: 2rem;
+            h5 {
+                width: 80%;
+            }
             
             .mat-mdc-form-field {
                 width: 80%;
+
+                padding-bottom: 1rem;
             }
         }
 

@@ -1,11 +1,19 @@
 <header>
-    <h2 style="padding-left: 2rem;">Yahor Poresh</h2>
-    <ng-container *ngIf="deviceType.breakpoint >= breakpoints.LARGE">
+    <h2 style="padding-left: 2rem; cursor: pointer;" (click)="navigate(homePageTrx)">Yahor Poresh</h2>
+    <ng-container *ngIf="deviceType.breakpoint >= breakpoints.LARGE else mobileNav">
         <div class="nav-container">
             <div appToggBtn (click)="toggleTheme()" [(toggled)]="isDarkTheme"><!-- This div will act as a toggle button --></div>
-            <button appFlatBtn btnSize="small" btnColor="primary">Show</button>
-            <button appFlatBtn btnSize="small" btnColor="primary">About Me</button>
-            <button appFlatBtn btnSize="small" btnColor="primary">Contact</button>
+            <button appFlatBtn btnSize="small" btnColor="primary" (click)="navigate(showPageTrx)">Show</button>
+            <button appFlatBtn btnSize="small" btnColor="primary" >About Me</button>    <!-- (click)="navigate(aboutPageTrx)" -->
+            <button appFlatBtn btnSize="small" btnColor="primary" (click)="scrollToBottom()">Contact</button>
         </div> 
     </ng-container>
+
+    <ng-template #mobileNav>
+        <div class="nav-container">
+            <div appToggBtn (click)="toggleTheme()" [(toggled)]="isDarkTheme"></div>
+            <button appIconBtn style="border-radius: none;" btnSize="small" btnColor="primary" (click)="toggleSidenav()"><i class="fa-regular fa-compass"></i></button>
+        </div> 
+    </ng-template>
 </header>
+

@@ -1,7 +1,25 @@
+
 <div class="page-wrapper">
-  <app-header></app-header>
-  <div class="app-container">
-    <router-outlet></router-outlet>
-    <app-footer></app-footer>
-  </div>
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" opened="false">
+      <div class="side-nav-container">
+        <div class="nav-header">
+          <h2>Yahor Poresh</h2>
+          <button appIconBtn style="border-radius: none;" btnSize="small" btnColor="primary" (click)="toggleSidenav()"><i class="fa-regular fa-compass"></i></button>
+        </div>
+
+        <div class="nav-container">
+          <button appFillBtn btnSize="small" btnColor="primary" (click)="navigate(showPageTrx)">Show</button>
+          <button appFillBtn btnSize="small" btnColor="primary" (click)="navigate(aboutPageTrx)">About Me</button>
+      </div> 
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content style="overflow: auto;">
+        <app-header (sidenavToggle)="toggleSidenav()"></app-header>
+        <div class="app-container">
+          <router-outlet></router-outlet>
+          <app-footer></app-footer>
+        </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>

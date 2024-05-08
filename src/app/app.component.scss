@@ -1,5 +1,6 @@
 .page-wrapper {
     width: 100%;
+    height: 100%;
 
     display: flex;
     flex-wrap: nowrap;
@@ -7,20 +8,96 @@
     justify-content: flex-start;
     align-items: center;
 
-    .app-container {
-        max-width: 90rem;
-        width: calc(100% - 2rem);
-
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-
-        padding: 1rem;
-    }
-
-    app-header, app-footer, router-outlet {
+    mat-sidenav-container {
         width: 100%;
+        height: 100%;
+        overflow: auto;
+
+        background-color: var(--accent-900);
+
+        .mat-drawer-content {
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+    
+            .app-container {
+                max-width: 90rem;
+                height: auto;
+        
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+        
+                padding: 1rem;
+    
+                background-color: var(--accent-900);
+            }
+        
+            app-header, app-footer, router-outlet {
+                width: 100%;
+            }
+            
+        }
+    
+        mat-sidenav {
+            position: fixed;
+    
+            height: 100vh;
+            width: 100%;
+    
+            max-width: 500px;
+    
+            z-index: 100;
+
+            .side-nav-container {
+                width: calc(100% - 2rem);
+                height: calc(100% - 2rem);
+
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: flex-start;
+
+                padding: 1rem;
+
+                background-color: var(--accent-contrast-900);
+
+                .nav-header {
+                    width: 100%;
+
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+
+                }
+
+                .nav-container {
+                    width: 100%;
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    gap: 2rem;
+
+                    padding-top: 2rem;
+
+                }
+
+                h2 {
+                    color: var(--accent-900);
+                }
+            }
+        }
+
     }
+    
 }

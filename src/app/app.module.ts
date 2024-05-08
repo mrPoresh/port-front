@@ -15,6 +15,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { AppComponent } from './app.component';
 import { BasePageComponent } from './components/base/base-page/base-page.component';
@@ -60,6 +61,7 @@ import { ContentSectionComponent } from './components/home-page/content-section/
     MatInputModule,
     MatDividerModule,
     MatListModule,
+    MatSidenavModule,
   ],
   providers: [
     // services, guards, interceptors

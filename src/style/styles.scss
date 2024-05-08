@@ -285,6 +285,8 @@ $breakpoints: (
 html, body {
   width: 100%;
   height: 100%;
+
+  overflow-y: auto;
 }
 
 body {
@@ -617,6 +619,12 @@ p {   //  def text
       font-size: 1.5rem;
     }
 
+    .fa-brands, .fab {
+      width: 1.5rem;
+      height: 1.5rem;
+      font-size: 1.5rem;
+    }
+
   }
 
   &.medium {
@@ -628,6 +636,13 @@ p {   //  def text
       height: 2rem;
       font-size: 2rem;
     }
+
+    .fa-brands, .fab {
+      width: 2rem;
+      height: 2rem;
+      font-size: 2rem;
+    }
+
   }
 
   &.large {
@@ -789,13 +804,31 @@ p {   //  def text
 
   //  def. case
   .mat-mdc-text-field-wrapper {
+
+    input {
+      color: var(--accent-contrast-900) !important;
+      caret-color: var(--accent-contrast-900) !important;
+      
+    }
+
+    textarea {
+      color: var(--accent-contrast-900) !important;
+      caret-color: var(--accent-contrast-900) !important;
+
+    }
+
+    .mdc-notched-outline {
+      background-color: var(--accent-800);
+      border-radius: 1rem;
+      z-index: -10;
+    }
     
     .mdc-notched-outline__trailing {
       border: none;
 
-      border-top: 0.25rem solid var(--accent-300) !important;
-      border-right: 0.25rem solid var(--accent-300) !important;
-      border-bottom: 0.25rem solid var(--accent-300) !important;
+      border-top: 0.25rem solid var(--primary-500) !important;
+      border-right: 0.25rem solid var(--primary-500) !important;
+      border-bottom: 0.25rem solid var(--primary-500) !important;
 
       border-left: none;
 
@@ -810,9 +843,9 @@ p {   //  def text
       border: none;
       border-right: none;
 
-      border-top: 0.25rem solid var(--accent-300) !important;
-      border-left: 0.25rem solid var(--accent-300) !important;
-      border-bottom: 0.25rem solid var(--accent-300) !important;
+      border-top: 0.25rem solid var(--primary-500) !important;
+      border-left: 0.25rem solid var(--primary-500) !important;
+      border-bottom: 0.25rem solid var(--primary-500) !important;
 
       border-top-left-radius: 1rem !important;
       border-bottom-left-radius: 1rem !important;
@@ -823,16 +856,22 @@ p {   //  def text
 
     &:hover {
 
+      .mdc-notched-outline {
+        background-color: var(--accent-900);
+      }
+
       .mdc-notched-outline__trailing {
-        border-top: 0.25rem solid var(--accent-100) !important;
-        border-right: 0.25rem solid var(--accent-100) !important;
-        border-bottom: 0.25rem solid var(--accent-100) !important;
+        border-top: 0.25rem solid var(--primary-300) !important;
+        border-right: 0.25rem solid var(--primary-300) !important;
+        border-bottom: 0.25rem solid var(--primary-300) !important;
+
+        // background-color: var(--accent-contrast-500);
       }
   
       .mdc-notched-outline__leading {
-        border-top: 0.25rem solid var(--accent-100) !important;
-        border-left: 0.25rem solid var(--accent-100) !important;
-        border-bottom: 0.25rem solid var(--accent-100) !important;
+        border-top: 0.25rem solid var(--primary-300) !important;
+        border-left: 0.25rem solid var(--primary-300) !important;
+        border-bottom: 0.25rem solid var(--primary-300) !important;
       }
 
     }
@@ -844,13 +883,17 @@ p {   //  def text
     
     .mat-mdc-text-field-wrapper {
 
+      .mdc-notched-outline {
+        background-color: var(--accent-900);
+      }
+
       .mdc-notched-outline__trailing {
         border: none;
         border-left: none;
 
-        border-top: 0.25rem solid var(--accent-100) !important;
-        border-right: 0.25rem solid var(--accent-100) !important;
-        border-bottom: 0.25rem solid var(--accent-100) !important;
+        border-top: 0.25rem solid var(--primary-600) !important;
+        border-right: 0.25rem solid var(--primary-600) !important;
+        border-bottom: 0.25rem solid var(--primary-600) !important;
 
         border-top-right-radius: 1rem;
         border-bottom-right-radius: 1rem;
@@ -860,9 +903,9 @@ p {   //  def text
         border: none;
         border-right: none;
 
-        border-top: 0.25rem solid var(--accent-100) !important;
-        border-left: 0.25rem solid var(--accent-100) !important;
-        border-bottom: 0.25rem solid var(--accent-100) !important;
+        border-top: 0.25rem solid var(--primary-600) !important;
+        border-left: 0.25rem solid var(--primary-600) !important;
+        border-bottom: 0.25rem solid var(--primary-600) !important;
 
         border-top-left-radius: 1rem;
         border-bottom-left-radius: 1rem;

@@ -6,26 +6,15 @@
             <h5>A Wrocław based front-end developer passionate about building accessible and user friendly websites.</h5>
             
             <div class="intro-nav">
-                <button appFillBtn btnSize="small" btnColor="primary">Contact</button>
-                <button appIconBtn btnSize="small" btnColor="primary"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon></button>
-                <button appIconBtn btnSize="small" btnColor="primary"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon></button>
+                <button appFillBtn style="width: 11rem;" btnSize="small" btnColor="primary">Contact Me</button>
+                <button appIconBtn btnSize="small" btnColor="primary"><i class="fab fa-github"></i></button>
+                <button appIconBtn btnSize="small" btnColor="primary"><i class="fab fa-telegram-plane"></i></button>
             </div>
         </div>
 
         <img src="../../../assets/images/YP.jpg">
     </div>
-    
-    <!-- project pages -->
-    <div class="content-section">
-        <h1>Featured Projects</h1>
-        <h5>Here are some of the selected projects that showcase my passion for front-end development.</h5>
-    </div>
-    <ng-container *ngIf="contentSectionsData">
-        <ng-container *ngFor="let projectDescription of contentSectionsData">
-            <app-content-section [_projectDescription]="projectDescription"></app-content-section>
-        </ng-container>
-    </ng-container>
-    
+
     <div class="self-container">
         <div class="self-header">
             <h1>About me</h1>
@@ -36,4 +25,16 @@
             <h5 class="h5-primary">More about me</h5>
         </div>
     </div>
+    
+    <!-- project pages -->
+    <div class="content-section">
+        <h1>Featured Projects</h1>
+        <h5>Here are some of the selected projects that showcase my passion for development.</h5>
+    </div>
+    <ng-container *ngIf="contentSectionsData">
+        <ng-container *ngFor="let projectDescription of contentSectionsData">
+            <app-content-section [_projectDescription]="projectDescription"></app-content-section>
+        </ng-container>
+    </ng-container>
+    
 </div>
