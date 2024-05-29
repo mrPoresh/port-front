@@ -56,16 +56,16 @@
 }
 
 footer {
-    min-height: calc(100vh - 12rem);
+    min-height: 100vh;
     height: 100%;
 
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 
-    padding: 4rem 0rem 4rem 0rem;
+    //padding: 4rem 0rem 4rem 0rem;
 
     @include mobile-footer-layout;
 
@@ -112,14 +112,14 @@ footer {
 
     .contact-container {   
         flex-grow: 3;
-        align-self: baseline;
+        align-self: center;
         
         #contact-form {
             
             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
 
             h5 {
