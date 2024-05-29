@@ -2,17 +2,7 @@
 <div class="page-wrapper">
   <mat-sidenav-container class="example-container">
     <mat-sidenav #sidenav mode="side" opened="false">
-      <div class="side-nav-container">
-        <div class="nav-header">
-          <h2>Yahor Poresh</h2>
-          <button appIconBtn style="border-radius: none;" btnSize="small" btnColor="primary" (click)="toggleSidenav()"><i class="fa-regular fa-compass"></i></button>
-        </div>
-
-        <div class="nav-container">
-          <button appFillBtn btnSize="small" btnColor="primary" (click)="navigate(showPageTrx)">Show</button>
-          <button appFillBtn btnSize="small" btnColor="primary" (click)="navigate(aboutPageTrx)">About Me</button>
-      </div> 
-      </div>
+      <app-side-nav (toggleEvent)="toggleSidenav()"></app-side-nav>
     </mat-sidenav>
     <mat-sidenav-content style="overflow: auto; margin-left: 0 !important;">
         <app-header (sidenavToggle)="toggleSidenav()"></app-header>

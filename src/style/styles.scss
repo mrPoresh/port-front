@@ -371,7 +371,7 @@ h5 {  //  Buttons
   font-weight: 500;
 
   @include responsive-fontsize(1.25rem, 1.25rem, 1rem, 1rem);
-  @include responsive-lineheight(1.6rem, 1.6rem, 1.3rem, 1.3rem);
+  @include responsive-lineheight(1.8rem, 1.7rem, 1.6rem, 1.5rem);
 }
 p {   //  def text
   font-family: "Ubuntu", sans-serif; 

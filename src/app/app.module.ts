@@ -29,6 +29,7 @@ import { ShowPageComponent } from './components/show-page/show-page.component';
 import { IconBtnDirective } from './directives/icon-btn.directive';
 import { ToggBtnDirective } from './directives/togg-btn.directive';
 import { ContentSectionComponent } from './components/home-page/content-section/content-section.component';
+import { SideNavComponent } from './components/base/side-nav/side-nav.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { ContentSectionComponent } from './components/home-page/content-section/
     ToggBtnDirective,
     ShowPageComponent,
     ContentSectionComponent,
+    SideNavComponent,
   ],
   imports: [
     BrowserModule,
